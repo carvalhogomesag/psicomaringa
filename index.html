@@ -23,7 +23,8 @@
     <div id="root"></div>
     
     <!-- Hidden form for Netlify detection -->
-    <form name="leads-psico-maringa" netlify netlify-honeypot="bot-field" hidden>
+    <form name="leads-psico-maringa" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="leads-psico-maringa" />
       <input type="text" name="bot-field" />
       <input type="text" name="name" />
       <input type="tel" name="phone" />
