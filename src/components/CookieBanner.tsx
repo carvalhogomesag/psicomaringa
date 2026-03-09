@@ -1,64 +1,189 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { X, ShieldCheck } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { Cookie, X } from "lucide-react";
 
-export const CookieBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const STORAGE_KEY = "psico_cookie_consent";
+
+export default function CookieBanner() {
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
+    const consent = localStorage.getItem(STORAGE_KEY);
     if (!consent) {
-      const timer = setTimeout(() => setIsVisible(true), 2000);
+      // Pequeno delay para não aparecer imediatamente
+      const timer = setTimeout(() => setVisible(true), 1500);
       return () => clearTimeout(timer);
     }
   }, []);
 
-  const handleAccept = () => {
-    localStorage.setItem('cookie-consent', 'accepted');
-    setIsVisible(false);
+  const accept = () => {
+    localStorage.setItem(STORAGE_KEY, "accepted");
+    setVisible(false);
+  };
+
+  const dismiss = () => {
+    localStorage.setItem(STORAGE_KEY, "dismissed");
+    setVisible(false);
   };
 
   return (
     <AnimatePresence>
-      {isVisible && (
+      {visible && (
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
-          className="fixed bottom-0 left-0 right-0 z-[100] p-4 md:p-6"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 24 }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          style={{
+            position: "fixed",
+            bottom: "1.5rem",
+            left: "1.5rem",
+            right: "1.5rem",
+            zIndex: 9999,
+            maxWidth: "520px",
+            margin: "0 auto",
+          }}
+          role="dialog"
+          aria-label="Aviso de cookies"
         >
-          <div className="max-w-4xl mx-auto bg-zinc-900 text-white rounded-2xl shadow-2xl border border-white/10 p-6 md:flex items-center justify-between gap-8">
-            <div className="flex items-start gap-4 mb-6 md:mb-0">
-              <div className="bg-emerald-600/20 p-2 rounded-lg shrink-0">
-                <ShieldCheck className="text-emerald-500" size={24} />
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-1">Privacidade e Cookies</h4>
-                <p className="text-zinc-400 text-sm leading-relaxed">
-                  Utilizamos cookies para melhorar sua experiência e analisar o tráfego do site. 
-                  Ao continuar navegando, você concorda com nossa política de privacidade.
-                </p>
+          <div
+            style={{
+              background: "var(--color-bark)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              borderRadius: "6px",
+              padding: "1.25rem 1.5rem",
+              display: "flex",
+              alignItems: "flex-start",
+              gap: "1rem",
+              boxShadow: "0 16px 48px rgba(28,38,26,0.35)",
+            }}
+          >
+            {/* Ícone */}
+            <div
+              style={{
+                flexShrink: 0,
+                width: "36px",
+                height: "36px",
+                borderRadius: "50%",
+                background: "rgba(168,194,158,0.15)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginTop: "2px",
+              }}
+            >
+              <Cookie size={16} color="var(--color-moss-light)" />
+            </div>
+
+            {/* Texto */}
+            <div style={{ flex: 1 }}>
+              <p
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "0.85rem",
+                  color: "rgba(253,252,249,0.85)",
+                  lineHeight: 1.6,
+                  margin: "0 0 1rem 0",
+                }}
+              >
+                Usamos cookies para melhorar sua experiência e entender como nosso site é utilizado.
+                Ao continuar, você concorda com nossa{" "}
+                <a
+                  href="/privacidade"
+                  style={{
+                    color: "var(--color-moss-light)",
+                    textDecoration: "none",
+                    borderBottom: "1px solid rgba(168,194,158,0.4)",
+                  }}
+                >
+                  política de privacidade
+                </a>
+                .
+              </p>
+
+              {/* Ações */}
+              <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                <button
+                  onClick={accept}
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                    letterSpacing: "0.06em",
+                    background: "var(--color-moss)",
+                    color: "var(--color-cream)",
+                    border: "none",
+                    borderRadius: "4px",
+                    padding: "0.5rem 1.25rem",
+                    cursor: "pointer",
+                    transition: "background 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLButtonElement).style.background = "var(--color-moss-mid)";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLButtonElement).style.background = "var(--color-moss)";
+                  }}
+                >
+                  Aceitar
+                </button>
+                <button
+                  onClick={dismiss}
+                  style={{
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "0.8rem",
+                    fontWeight: 500,
+                    background: "transparent",
+                    color: "rgba(253,252,249,0.55)",
+                    border: "1px solid rgba(255,255,255,0.12)",
+                    borderRadius: "4px",
+                    padding: "0.5rem 1.25rem",
+                    cursor: "pointer",
+                    transition: "color 0.2s, border-color 0.2s",
+                  }}
+                  onMouseEnter={(e) => {
+                    const el = e.currentTarget as HTMLButtonElement;
+                    el.style.color = "rgba(253,252,249,0.8)";
+                    el.style.borderColor = "rgba(255,255,255,0.25)";
+                  }}
+                  onMouseLeave={(e) => {
+                    const el = e.currentTarget as HTMLButtonElement;
+                    el.style.color = "rgba(253,252,249,0.55)";
+                    el.style.borderColor = "rgba(255,255,255,0.12)";
+                  }}
+                >
+                  Recusar
+                </button>
               </div>
             </div>
-            
-            <div className="flex items-center gap-3 shrink-0">
-              <button
-                onClick={handleAccept}
-                className="flex-1 md:flex-none bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-xl font-bold transition-all text-sm"
-              >
-                ACEITAR
-              </button>
-              <button
-                onClick={() => setIsVisible(false)}
-                className="p-3 text-zinc-500 hover:text-white transition-colors"
-                aria-label="Fechar"
-              >
-                <X size={20} />
-              </button>
-            </div>
+
+            {/* Fechar */}
+            <button
+              onClick={dismiss}
+              aria-label="Fechar"
+              style={{
+                flexShrink: 0,
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
+                color: "rgba(253,252,249,0.4)",
+                padding: "4px",
+                marginTop: "-2px",
+                borderRadius: "4px",
+                transition: "color 0.2s",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.color = "rgba(253,252,249,0.8)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLButtonElement).style.color = "rgba(253,252,249,0.4)";
+              }}
+            >
+              <X size={16} />
+            </button>
           </div>
         </motion.div>
       )}
     </AnimatePresence>
   );
-};
+}

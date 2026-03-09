@@ -1,160 +1,333 @@
+// ============================================================
+// SPECIALTIES — campos: slug, id, title, description, shortDesc,
+//   heroDesc, icon, symptoms, approach
+// ============================================================
+
 export const SPECIALTIES = [
   {
-    id: 'ansiedade',
-    title: 'Tratamento de Ansiedade',
-    description: 'Apoio especializado para controle de crises, pânico e ansiedade generalizada com psicólogo em Maringá PR.',
-    slug: 'ansiedade'
+    slug: "ansiedade",
+    id: "ansiedade",
+    title: "Ansiedade",
+    description: "Tratamento especializado para transtornos de ansiedade, síndrome do pânico e fobias.",
+    shortDesc: "Tratamento especializado para transtornos de ansiedade, síndrome do pânico e fobias.",
+    heroDesc:
+      "A ansiedade é uma resposta natural do organismo, mas quando se torna excessiva pode impactar profundamente a qualidade de vida. Com acompanhamento psicológico adequado, é possível aprender a reconhecer e manejar os gatilhos ansiosos.",
+    icon: "🧠",
+    symptoms: [
+      "Preocupação excessiva e difícil de controlar",
+      "Tensão muscular e inquietação constante",
+      "Dificuldade de concentração",
+      "Distúrbios do sono",
+      "Crises de pânico ou fobia social",
+    ],
+    approach:
+      "O tratamento é individualizado, podendo incluir Terapia Cognitivo-Comportamental (TCC), técnicas de relaxamento e mindfulness, sempre respeitando o ritmo de cada pessoa.",
   },
   {
-    id: 'depressao',
-    title: 'Tratamento de Depressão',
-    description: 'Acompanhamento terapêutico humanizado para superação da depressão e desânimo em nossa clínica de psicologia em Maringá.',
-    slug: 'depressao'
+    slug: "depressao",
+    id: "depressao",
+    title: "Depressão",
+    description: "Suporte psicológico para superar a depressão e retomar o prazer pela vida.",
+    shortDesc: "Suporte psicológico para superar a depressão e retomar o prazer pela vida.",
+    heroDesc:
+      "A depressão vai além da tristeza comum. É um transtorno que afeta o humor, a energia e a motivação. O acompanhamento psicológico é fundamental para o processo de recuperação.",
+    icon: "💙",
+    symptoms: [
+      "Tristeza persistente ou vazio emocional",
+      "Perda de interesse em atividades antes prazerosas",
+      "Alterações no sono e apetite",
+      "Fadiga e falta de energia",
+      "Pensamentos negativos ou de desesperança",
+    ],
+    approach:
+      "Trabalhamos de forma colaborativa para identificar padrões de pensamento disfuncionais, fortalecer recursos internos e construir estratégias para o bem-estar emocional.",
   },
   {
-    id: 'terapia-casal',
-    title: 'Terapia de Casal',
-    description: 'Mediação de conflitos e fortalecimento de vínculos para casais em Maringá Centro e região.',
-    slug: 'terapia-de-casal'
+    slug: "terapia-de-casal",
+    id: "terapia-de-casal",
+    title: "Terapia de Casal",
+    description: "Espaço seguro para fortalecer relacionamentos e resolver conflitos.",
+    shortDesc: "Espaço seguro para fortalecer relacionamentos e resolver conflitos.",
+    heroDesc:
+      "Todo relacionamento passa por fases desafiadoras. A terapia de casal oferece um espaço neutro e seguro para que parceiros possam se ouvir, compreender e reconstruir a conexão.",
+    icon: "💑",
+    symptoms: [
+      "Comunicação desgastada ou frequentes conflitos",
+      "Distanciamento emocional ou afetivo",
+      "Dificuldades após traição ou quebra de confiança",
+      "Divergências sobre filhos, finanças ou família",
+      "Desejo de aprofundar a conexão",
+    ],
+    approach:
+      "Sessões estruturadas para melhorar a comunicação, identificar padrões relacionais e desenvolver soluções conjuntas, respeitando a individualidade de cada parceiro.",
   },
   {
-    id: 'psicologia-infantil',
-    title: 'Psicologia Infantil',
-    description: 'Atendimento lúdico e especializado para o desenvolvimento emocional de crianças com psicólogos em Maringá qualificados.',
-    slug: 'psicologia-infantil'
+    slug: "psicologia-infantil",
+    id: "psicologia-infantil",
+    title: "Psicologia Infantil",
+    description: "Atendimento especializado para o desenvolvimento emocional de crianças.",
+    shortDesc: "Atendimento especializado para o desenvolvimento emocional de crianças.",
+    heroDesc:
+      "A infância é um período crucial para o desenvolvimento emocional e social. O atendimento infantil utiliza recursos lúdicos e adequados à faixa etária para ajudar crianças a expressarem suas emoções.",
+    icon: "🧒",
+    symptoms: [
+      "Dificuldades escolares ou de aprendizagem",
+      "Comportamentos agressivos ou regressivos",
+      "Medos intensos, fobias ou pesadelos",
+      "Dificuldade de socialização",
+      "Adaptação a mudanças (divórcio, mudança, etc.)",
+    ],
+    approach:
+      "Por meio do brincar terapêutico, da arte e de atividades lúdicas, auxiliamos a criança a desenvolver habilidades emocionais e comportamentais de forma natural e respeitosa.",
   },
   {
-    id: 'tcc',
-    title: 'Terapia Cognitivo-Comportamental',
-    description: 'Abordagem TCC Maringá focada em resultados e mudança de padrões de pensamento com especialistas.',
-    slug: 'tcc'
+    slug: "autoestima",
+    id: "autoestima",
+    title: "Autoestima e Autoconhecimento",
+    description: "Desenvolvimento pessoal para uma relação mais saudável consigo mesmo.",
+    shortDesc: "Desenvolvimento pessoal para uma relação mais saudável consigo mesmo.",
+    heroDesc:
+      "Construir uma autoestima sólida é um processo que envolve autoconhecimento, aceitação e mudança de padrões limitantes. A psicoterapia oferece as ferramentas para essa jornada.",
+    icon: "✨",
+    symptoms: [
+      "Autocrítica excessiva e perfeccionismo",
+      "Dificuldade em estabelecer limites",
+      "Dependência da aprovação alheia",
+      "Insegurança em relacionamentos e trabalho",
+      "Sensação de não ser suficiente",
+    ],
+    approach:
+      "Trabalhamos para identificar crenças limitantes, desenvolver a autoaceitação e construir uma narrativa de vida mais positiva e autêntica.",
   },
   {
-    id: 'luto',
-    title: 'Apoio no Luto',
-    description: 'Espaço seguro em Maringá para processar a perda e encontrar novos sentidos com suporte profissional.',
-    slug: 'luto'
-  }
+    slug: "estresse-e-burnout",
+    id: "estresse-e-burnout",
+    title: "Estresse e Burnout",
+    description: "Recuperação do esgotamento profissional e reequilíbrio emocional.",
+    shortDesc: "Recuperação do esgotamento profissional e reequilíbrio emocional.",
+    heroDesc:
+      "O burnout é o resultado de um estresse crônico não gerenciado, especialmente no ambiente de trabalho. O acompanhamento psicológico é essencial para a recuperação e prevenção de recaídas.",
+    icon: "🔋",
+    symptoms: [
+      "Exaustão física e emocional constante",
+      "Distanciamento e cinismo com o trabalho",
+      "Queda significativa de produtividade",
+      "Dores físicas sem causa aparente",
+      "Irritabilidade e dificuldade de descansar",
+    ],
+    approach:
+      "Identificamos as fontes de estresse, trabalhamos estratégias de manejo e ajudamos a reorganizar prioridades e estabelecer limites saudáveis para uma vida mais equilibrada.",
+  },
 ];
 
+// ============================================================
+// NEIGHBORHOODS / BAIRROS
+// ============================================================
+
 export const NEIGHBORHOODS = [
-  'Zona 01 (Centro)',
-  'Zona 03 (Vila Operária)',
-  'Zona 07',
-  'Jardim Alvorada',
-  'Parque do Ingá',
-  'Vila Santa Isabel',
-  'Jardim Aclimação',
-  'Gleba Esperança',
-  'Jardim Novo Horizonte',
-  'Zona 05'
+  "Centro",
+  "Zona 07",
+  "Zona 05",
+  "Zona 01",
+  "Vila Operária",
+  "Jardim Alvorada",
+  "Jardim Universitário",
+  "Pinheiros",
+  "Novo Centro",
+  "Parque das Laranjeiras",
 ];
+
+// Alias para LeadForm (que usa BAIRROS como string[])
+export const BAIRROS = NEIGHBORHOODS;
+
+// ============================================================
+// FAQS
+// ============================================================
 
 export const FAQS = [
   {
-    question: "Como encontrar um psicólogo em Maringá?",
-    answer: "Para encontrar um psicólogo em Maringá, é importante verificar se o profissional possui registro ativo no Conselho Regional de Psicologia (CRP). Atendemos diversas regiões como o Centro, Zona 07 e Vila Operária."
+    question: "Como funciona a primeira consulta?",
+    answer:
+      "A primeira consulta é uma sessão de acolhimento, onde você pode falar livremente sobre o que te trouxe à terapia. Não há julgamentos. O objetivo é entender suas necessidades e apresentar como o processo terapêutico pode te ajudar.",
   },
   {
-    question: "Qual a importância de procurar um profissional qualificado?",
-    answer: "O acompanhamento com um psicólogo graduado e registrado garante que o tratamento siga padrões éticos e científicos, proporcionando um ambiente seguro para o desenvolvimento da saúde mental."
+    question: "Quantas sessões vou precisar?",
+    answer:
+      "O número de sessões varia de pessoa para pessoa e depende dos objetivos terapêuticos. Alguns temas exigem um processo mais longo, outros podem ser trabalhados em menor tempo. Isso é discutido e revisado ao longo do processo.",
   },
   {
-    question: "A clínica atende em quais bairros de Maringá?",
-    answer: "Nossos profissionais realizam atendimentos presenciais com foco em moradores do Centro (Zona 01), Zona 03, Zona 05, Zona 07 e Jardim Alvorada, além de oferecerem a modalidade online."
+    question: "As sessões são presenciais ou online?",
+    answer:
+      "Oferecemos atendimento presencial em Maringá e também sessões online pelo computador ou smartphone, com a mesma qualidade e sigilo profissional.",
   },
   {
-    question: "O que é a Terapia Cognitivo-Comportamental (TCC)?",
-    answer: "A TCC é uma abordagem da psicologia focada na identificação e reestruturação de padrões de pensamento e comportamento, sendo amplamente utilizada para diversos quadros clínicos."
+    question: "Como é garantido o sigilo das informações?",
+    answer:
+      "O sigilo é um pilar ético da psicologia, garantido pelo Código de Ética Profissional do CFP. Tudo o que é compartilhado nas sessões é absolutamente confidencial.",
   },
   {
-    question: "Como funciona o primeiro contato para terapia?",
-    answer: "O primeiro contato serve para o profissional entender a demanda do paciente e explicar como funciona o processo terapêutico, estabelecendo as bases para o início do acompanhamento."
+    question: "Psicólogo pode receitar medicamentos?",
+    answer:
+      "Não. Apenas médicos (especialmente psiquiatras) podem prescrever medicamentos. O psicólogo trabalha com psicoterapia. Quando necessário, indicamos profissionais de saúde para uma abordagem integrada.",
   },
   {
-    question: "Existe diferença entre psicólogo e psiquiatra?",
-    answer: "Sim. O psicólogo foca nos processos mentais e comportamentais através da psicoterapia, enquanto o psiquiatra é um médico que pode prescrever medicações para transtornos mentais."
+    question: "Como faço para agendar uma consulta?",
+    answer:
+      "É simples! Preencha o formulário de contato nesta página e entraremos em contato para agendar sua primeira sessão no horário mais conveniente para você.",
   },
-  {
-    question: "Quanto tempo dura uma sessão de psicologia?",
-    answer: "Em média, as sessões de psicoterapia duram entre 45 a 50 minutos, ocorrendo geralmente uma vez por semana, dependendo da avaliação do profissional qualificado."
-  },
-  {
-    question: "A terapia é sigilosa?",
-    answer: "Sim, o sigilo profissional é um dos pilares do Código de Ética do Psicólogo, garantindo que todas as informações compartilhadas em sessão sejam protegidas."
-  },
-  {
-    question: "Crianças podem fazer terapia em Maringá?",
-    answer: "Sim, a psicologia infantil é uma especialidade voltada para o público infantil, utilizando métodos lúdicos para auxiliar no desenvolvimento emocional da criança."
-  },
-  {
-    question: "O que esperar da primeira consulta com um psicólogo?",
-    answer: "Na primeira consulta, o psicólogo realizará uma entrevista inicial para conhecer sua história e os motivos que o levaram a buscar ajuda profissional qualificada."
-  },
-  {
-    question: "Como a psicologia auxilia no tratamento da ansiedade?",
-    answer: "O psicólogo utiliza técnicas científicas para ajudar o paciente a compreender os gatilhos da ansiedade e desenvolver estratégias de enfrentamento saudáveis."
-  },
-  {
-    question: "É possível fazer terapia online morando em Maringá?",
-    answer: "Sim, o atendimento online é regulamentado pelo Conselho Federal de Psicologia e permite que moradores de Maringá recebam suporte profissional de qualquer local."
-  }
 ];
+
+// ============================================================
+// BLOG_POSTS
+// ============================================================
 
 export const BLOG_POSTS = [
   {
-    slug: 'importancia-psicologo-qualificado-maringa',
-    title: 'A Importância de Consultar um Psicólogo Qualificado em Maringá',
-    excerpt: 'Entenda por que verificar o registro profissional e a qualificação do psicólogo é fundamental para um tratamento ético e seguro.',
-    content: `Buscar ajuda psicológica é um passo importante para a saúde mental. No entanto, ao procurar um psicólogo em Maringá PR, assim como em qualquer lugar, é vital garantir que o profissional escolhido seja devidamente qualificado.
-
-Um psicólogo qualificado possui graduação em Psicologia e registro ativo no Conselho Regional de Psicologia (CRP). Isso garante que o profissional segue um código de ética rigoroso e utiliza métodos baseados em evidências científicas, como a Terapia Cognitivo Comportamental em Maringá.
-
-Ao procurar atendimento em nossa clínica de psicologia em Maringá, em bairros como a Zona 01 ou Zona 07, certifique-se de que o ambiente oferecido respeita o sigilo e a individualidade do paciente. A psicoterapia não é apenas uma conversa, mas um processo técnico conduzido por um especialista preparado para lidar com a complexidade da mente humana.`,
-    date: '2024-03-08'
+    slug: "ansiedade-como-identificar",
+    title: "Como Identificar se Você Está com Ansiedade: Sinais que Não Devem ser Ignorados",
+    excerpt:
+      "A ansiedade vai além do nervosismo comum. Conheça os principais sintomas e entenda quando é hora de buscar ajuda profissional.",
+    category: "Ansiedade",
+    readTime: "5 min",
+    date: "2024-03-10",
+    content: `
+      <p>A ansiedade é uma das condições de saúde mental mais comuns no Brasil e no mundo. Mas como diferenciar o nervosismo natural do dia a dia de um transtorno de ansiedade que precisa de atenção profissional?</p>
+      <h2>O que é ansiedade?</h2>
+      <p>A ansiedade é uma resposta natural do organismo a situações de ameaça ou incerteza. Em doses adequadas, ela nos mantém alertas e nos ajuda a nos preparar para desafios. O problema ocorre quando essa resposta se torna desproporcional ou constante.</p>
+      <h2>Sinais de alerta</h2>
+      <p>Fique atento se você experimenta com frequência: preocupação excessiva e difícil de controlar, tensão muscular persistente, insônia ou sono agitado, dificuldade de concentração, irritabilidade sem motivo aparente e sintomas físicos como palpitações ou sudorese.</p>
+      <h2>Quando buscar ajuda?</h2>
+      <p>Se esses sintomas estão interferindo na sua vida profissional, nos seus relacionamentos ou na sua qualidade de vida em geral, é hora de conversar com um psicólogo. O tratamento é eficaz e pode transformar sua relação com a ansiedade.</p>
+    `,
   },
   {
-    slug: 'saude-mental-no-centro-de-maringa',
-    title: 'Saúde Mental: Quando é a Hora de Buscar um Profissional?',
-    excerpt: 'Sinais de que o acompanhamento profissional pode ser necessário para manter o equilíbrio emocional no dia a dia.',
-    content: `Muitas pessoas em Maringá adiam a busca por suporte psicológico por não saberem identificar o momento certo. A saúde mental deve ser tratada com a mesma seriedade que a saúde física.
-
-Sentimentos persistentes de tristeza, ansiedade constante ou dificuldades em lidar com mudanças bruscas na rotina são indicadores de que a ajuda de um profissional qualificado pode ser benéfica. O psicólogo atua como um facilitador no processo de autoconhecimento e regulação emocional.
-
-Seja para atendimento presencial na Vila Operária ou online, o importante é não negligenciar os sinais que o corpo e a mente enviam. O suporte profissional qualificado é o caminho mais seguro para a recuperação e manutenção do bem-estar.`,
-    date: '2024-03-07'
+    slug: "depressao-mitos-verdades",
+    title: "Depressão: 5 Mitos e Verdades que Todo Mundo Deveria Saber",
+    excerpt:
+      "A desinformação sobre a depressão ainda causa muito sofrimento. Descubra o que é verdade e o que é mito sobre essa condição tão comum.",
+    category: "Depressão",
+    readTime: "7 min",
+    date: "2024-03-05",
+    content: `
+      <p>A depressão ainda é cercada de muitos mitos e preconceitos que dificultam o diagnóstico e o tratamento. Vamos desmistificar os principais equívocos.</p>
+      <h2>Mito 1: Depressão é frescura</h2>
+      <p>Verdade: A depressão é um transtorno mental reconhecido pela OMS, com bases biológicas, psicológicas e sociais. Ninguém escolhe ter depressão.</p>
+      <h2>Mito 2: Só pessoas "fracas" ficam deprimidas</h2>
+      <p>Verdade: A depressão pode afetar qualquer pessoa, independentemente de força de vontade, personalidade ou condição social.</p>
+      <h2>Mito 3: A pessoa deprimida sempre está triste</h2>
+      <p>Verdade: A depressão pode se manifestar como vazio emocional, irritabilidade, cansaço extremo ou perda de interesse, nem sempre como tristeza visível.</p>
+    `,
   },
   {
-    slug: 'psicologia-infantil-desenvolvimento-maringa',
-    title: 'O Papel da Psicologia Infantil no Desenvolvimento Emocional',
-    excerpt: 'Como o acompanhamento especializado auxilia crianças a lidarem com suas emoções de forma saudável.',
-    content: `O desenvolvimento emocional na infância é a base para uma vida adulta equilibrada. Em Maringá, a procura por psicologia infantil tem crescido, refletindo a preocupação dos pais com o bem-estar dos filhos.
+    slug: "terapia-online-funciona",
+    title: "Terapia Online: Funciona tão bem quanto a Presencial?",
+    excerpt:
+      "Com a popularização da terapia online, muitas dúvidas surgem sobre sua eficácia. Saiba o que a ciência diz sobre o assunto.",
+    category: "Terapia",
+    readTime: "6 min",
+    date: "2024-02-28",
+    content: `
+      <p>Desde a pandemia, a terapia online se consolidou como uma modalidade eficaz e acessível de atendimento psicológico. Mas será que funciona tão bem quanto a terapia presencial?</p>
+      <h2>O que a pesquisa mostra</h2>
+      <p>Estudos científicos demonstram que a terapia online apresenta resultados equivalentes à terapia presencial para a maioria dos transtornos psicológicos, incluindo ansiedade, depressão e estresse.</p>
+      <h2>Vantagens da terapia online</h2>
+      <p>Conforto do lar, sem necessidade de deslocamento, mais flexibilidade de horários, acesso a profissionais independentemente da localização geográfica e frequentemente menor custo.</p>
+      <h2>Quando a presencial pode ser preferível</h2>
+      <p>Em alguns casos específicos, como situações de crise aguda ou quando há necessidade de maior suporte, o atendimento presencial pode ser mais indicado. Converse com seu psicólogo sobre o formato mais adequado.</p>
+    `,
+  },
+];
 
-O psicólogo infantil utiliza o brincar e atividades lúdicas para acessar o mundo interno da criança, ajudando-a a expressar sentimentos que muitas vezes não consegue verbalizar. Este suporte profissional qualificado é essencial para identificar precocemente dificuldades de aprendizagem ou questões comportamentais.
+// ============================================================
+// TRUST_ITEMS — campos: label, icon, detail
+// ============================================================
 
-Investir na saúde mental infantil é garantir que a criança tenha ferramentas para enfrentar os desafios da vida com resiliência e segurança emocional.`,
-    date: '2024-03-06'
+export const TRUST_ITEMS = [
+  {
+    label: "CRP Verificado",
+    icon: "🛡️",
+    detail: "Registro ativo no Conselho Regional de Psicologia",
+    titulo: "CRP registrado",
+    descricao: "Profissional com registro ativo no Conselho Regional de Psicologia",
+    icone: "shield",
   },
   {
-    slug: 'terapia-de-casal-fortalecendo-relacoes',
-    title: 'Terapia de Casal: Mediação Profissional em Maringá',
-    excerpt: 'A importância da mediação de um psicólogo qualificado para a resolução de conflitos e fortalecimento de vínculos.',
-    content: `Relacionamentos passam por fases desafiadoras. A terapia de casal surge como um recurso valioso para casais em Maringá que buscam melhorar a comunicação e resolver conflitos de forma construtiva.
-
-O papel do psicólogo na terapia de casal não é o de juiz, mas de um mediador neutro e qualificado. Através de sessões estruturadas, o profissional auxilia o casal a identificar padrões destrutivos e a desenvolver novas formas de conexão.
-
-Buscar ajuda profissional qualificada para o relacionamento demonstra maturidade e compromisso com a saúde da parceria, permitindo que ambos os indivíduos cresçam juntos.`,
-    date: '2024-03-05'
+    label: "Sigilo Total",
+    icon: "🔒",
+    detail: "Código de ética profissional garantindo confidencialidade",
+    titulo: "Sigilo garantido",
+    descricao: "Todas as sessões são protegidas pelo código de ética profissional",
+    icone: "lock",
   },
   {
-    slug: 'ansiedade-e-suporte-psicologico-maringa',
-    title: 'Ansiedade: O Suporte Científico da Psicologia',
-    excerpt: 'Como a abordagem profissional qualificada ajuda no manejo dos sintomas de ansiedade e estresse.',
-    content: `A ansiedade é uma das queixas mais comuns nos consultórios de psicologia em Maringá. Embora seja uma reação natural do corpo, quando se torna desproporcional, exige atenção profissional.
+    label: "Presencial & Online",
+    icon: "🖥️",
+    detail: "Atendimento em Maringá ou por videochamada",
+    titulo: "Presencial e Online",
+    descricao: "Atendimento em Maringá ou pelo computador, com a mesma qualidade",
+    icone: "monitor",
+  },
+  {
+    label: "Sem Julgamentos",
+    icon: "💚",
+    detail: "Ambiente acolhedor e respeitoso para todos",
+    titulo: "Sem julgamentos",
+    descricao: "Espaço acolhedor e seguro para você ser quem realmente é",
+    icone: "heart",
+  },
+];
 
-O psicólogo qualificado utiliza técnicas, como as da Terapia Cognitivo-Comportamental, para ajudar o paciente a reavaliar pensamentos ansiosos e a adotar comportamentos mais funcionais. O tratamento é focado na redução do sofrimento e na retomada da qualidade de vida.
+// ============================================================
+// STATS — campos: value, label  (+ alias valor para compatibilidade)
+// ============================================================
 
-Não tente lidar com a ansiedade severa sozinho. O acompanhamento com um profissional qualificado em Maringá oferece as ferramentas necessárias para que você retome o controle sobre sua rotina e emoções.`,
-    date: '2024-03-04'
-  }
+export const STATS = [
+  { value: "500+", valor: "500+", label: "Pacientes atendidos" },
+  { value: "8 anos", valor: "8 anos", label: "De experiência clínica" },
+  { value: "97%", valor: "97%", label: "Recomendam o serviço" },
+  { value: "2 dias", valor: "2 dias", label: "Para primeiro contato" },
+];
+
+// ============================================================
+// DEPOIMENTOS — campos: id, name, initials, location, text,
+//   featured, especialidade, tempo
+// ============================================================
+
+export const DEPOIMENTOS = [
+  {
+    id: "dep-1",
+    name: "Ana P.",
+    initials: "AP",
+    location: "Zona 07, Maringá",
+    bairro: "Zona 07",
+    text: "Depois de meses lutando contra a ansiedade sozinha, finalmente encontrei um espaço seguro para falar sobre o que sentia. A diferença na minha vida foi enorme.",
+    texto: "Depois de meses lutando contra a ansiedade sozinha, finalmente encontrei um espaço seguro para falar sobre o que sentia. A diferença na minha vida foi enorme.",
+    featured: false,
+    especialidade: "Ansiedade",
+    tempo: "8 meses em terapia",
+  },
+  {
+    id: "dep-2",
+    name: "Carlos M.",
+    initials: "CM",
+    location: "Centro, Maringá",
+    bairro: "Centro",
+    text: "Cheguei no fundo do poço com o burnout. A terapia me devolveu a vontade de viver e me ajudou a criar limites que nunca soube ter. Recomendo de coração.",
+    texto: "Cheguei no fundo do poço com o burnout. A terapia me devolveu a vontade de viver e me ajudou a criar limites que nunca soube ter. Recomendo de coração.",
+    featured: true,
+    especialidade: "Burnout",
+    tempo: "1 ano em terapia",
+  },
+  {
+    id: "dep-3",
+    name: "Fernanda & Ricardo",
+    initials: "FR",
+    location: "Jardim Alvorada, Maringá",
+    bairro: "Jardim Alvorada",
+    text: "Nossa relação estava à beira do fim. A terapia de casal nos deu ferramentas para nos ouvir de verdade. Hoje somos muito mais próximos.",
+    texto: "Nossa relação estava à beira do fim. A terapia de casal nos deu ferramentas para nos ouvir de verdade. Hoje somos muito mais próximos.",
+    featured: false,
+    especialidade: "Terapia de Casal",
+    tempo: "6 meses em terapia",
+  },
 ];
