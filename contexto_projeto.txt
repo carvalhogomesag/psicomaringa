@@ -19,18 +19,18 @@ O projeto "Psico Maringá" é uma landing page de alta conversão para serviços
 - **Localização:** Foco em bairros de Maringá (Centro, Zona 07, Vila Operária, etc.) citados estrategicamente no texto.
 
 ## Funcionalidades Principais
-- **Formulário de Leads:** Componente centralizado (`LeadForm.tsx`) com validação e feedback de sucesso.
+- **Formulário de Leads:** Componente centralizado (LeadForm.tsx) com validação e feedback de sucesso.
 - **Mobile First:** Design otimizado para dispositivos móveis com botão flutuante de "Solicitar Contato".
 - **Conversão:** Múltiplos pontos de CTA (Call to Action) espalhados pelo site (Hero, Especialidades, Testemunhos, Footer).
-- **SEO Dinâmico:** Componente `SEO.tsx` para gerenciar títulos e descrições de cada página.
+- **SEO Dinâmico:** Componente SEO.tsx para gerenciar títulos e descrições de cada página.
 
 ## Diretrizes de Design
-- **Paleta de Cores:** Tons de esmeralda (`emerald`) e zinco (`zinc`) para transmitir profissionalismo e calma.
+- **Paleta de Cores:** Tons de esmeralda (emerald) e zinco (zinc) para transmitir profissionalismo e calma.
 - **Tipografia:** Inter (sans-serif) para legibilidade.
 - **Abordagem:** Ética e profissional, evitando dar conselhos diretos e focando na importância do acompanhamento especializado.
 
 ## Arquivos Chave
-- `/src/constants.ts`: Contém todos os dados de especialidades, bairros, FAQs e posts do blog.
-- `/src/components/LeadForm.tsx`: Lógica e interface do formulário de captura.
-- `/src/components/Layout.tsx`: Estrutura global (Header, Footer e Botão Flutuante).
-- `/src/Home.tsx`: Composição da landing page principal.
+- /src/constants.ts: Contém todos os dados de especialidades, bairros, FAQs e posts do blog.
+- /src/components/LeadForm.tsx: Lógica e interface do formulário de captura.
+- /src/components/Layout.tsx: Estrutura global (Header, Footer e Botão Flutuante).
+- /src/Home.tsx: Composição da landing page principal.

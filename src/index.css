@@ -1,9 +1,102 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:  "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+
+  /* ── Cores principais ── */
+  --color-moss:        #4A6741;
+  --color-moss-mid:    #6B8F62;
+  --color-moss-light:  #A8C29E;
+  --color-moss-pale:   #E8F0E6;
+  --color-moss-mist:   #F2F6F0;
+  --color-stone:       #8B7355;
+  --color-stone-light: #C4AA8A;
+  --color-bark:        #2C3A28;
+  --color-bark-deep:   #1C261A;
+
+  /* ── Fundos e neutros ── */
+  --color-fog:       #F7F5F0;
+  --color-fog-deep:  #EDE9E1;
+  --color-cream:     #FDFCF9;
+  --color-mist:      #7A7A72;
+  --color-rule:      #D8D4C8;
+}
+
+/* ── Reset base ─────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--font-sans);
+  background-color: var(--color-fog);
+  color: #2A2A28;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Tipografia global ──────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--color-bark-deep);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+/* ── Animações globais ──────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 1;    transform: scale(1); }
+  50%       { opacity: 0.45; transform: scale(0.82); }
+}
+
+/* ── Scroll reveal ──────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Botão primário global ──────────────────────────── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-moss);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.25s, transform 0.2s,
+              box-shadow 0.25s;
+  box-shadow: 0 4px 24px rgba(74, 103, 65, 0.28);
+}
+.btn-primary:hover {
+  background: var(--color-bark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(74, 103, 65, 0.32);
 }
